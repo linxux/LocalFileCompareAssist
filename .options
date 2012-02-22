@@ -1,0 +1,2 @@
+#Turn off debug for this plugin
+com.ah.filecompareassit.plugin.eclipse/debug=false

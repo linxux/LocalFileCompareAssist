@@ -31,6 +31,15 @@ Older Versions - [go here](https://github.com/linxux/LocalFileCompareAssist/tree
 
 ## Installation
 
+Manual installation
+
+* Use the Eclipse "_dropins_" folder. [(Supported dropins formats)](http://wiki.eclipse.org/Equinox/p2/Getting_Started#Supported_dropins_formats)
+* Use the Eclipse "_links_" folder.
+* Use the Eclipse "_plugins_" folder. (This way is not recommended.)
+
+Via the Eclipse p2 update manager (This will coming soon)
+
+
 ## Screenshots
 
 ## Version History

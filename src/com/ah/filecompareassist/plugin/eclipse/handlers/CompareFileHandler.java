@@ -87,8 +87,8 @@ public class CompareFileHandler extends AbstractHandler {
 			if (comparedPrjPath.toFile().exists()) {
 				// get the compared file location string
 				String nfileLocationStr = selectoionEl.getResourceLocation().toString().replace(
-						workspacePath.append(selectoionEl.getPrjName()).toOSString(),
-						comparedPrjPath.toOSString());
+						workspacePath.append(selectoionEl.getPrjName()).toString(),
+						comparedPrjPath.toString());
 				DebugUtil.debug("find the " + nfileLocationStr + " need to compare with.");
 				if (new File(nfileLocationStr).exists()) {
 					// mock the second resource according the selected sub menu

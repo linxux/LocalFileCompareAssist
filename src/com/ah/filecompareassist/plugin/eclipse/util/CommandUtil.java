@@ -15,7 +15,7 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jface.text.TextSelection;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 
@@ -26,8 +26,8 @@ public class CommandUtil {
 		Object firstElement;
 		String cPrjName = null;
 		IPath cfileLocation = null;
-		if (selection instanceof IStructuredSelection) {
-			firstElement = ((IStructuredSelection) selection).getFirstElement();
+		if (selection instanceof ITreeSelection) {
+			firstElement = ((ITreeSelection) selection).getFirstElement();
 			if (firstElement instanceof ICompilationUnit) {
 				ICompilationUnit cu = (ICompilationUnit) firstElement;
 				cPrjName = cu.getJavaProject().getElementName();

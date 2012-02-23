@@ -48,10 +48,10 @@ public class PrjsDynamicContributionItem extends CompoundContributionItem {
 		DebugUtil.debug("activeWorkbenchWindow.getSelectionService class: "+selection.getClass());
 		
 		SelectionElement selectedEl = CommandUtil.getSelectedElementInfo(window, selection);
-		String currentPrjName = selectedEl.getPrjName();
-		if(null == selectedEl || null == currentPrjName) {
+		if(null == selectedEl || null == selectedEl.getPrjName()) {
 			return new IContributionItem[0];
 		}
+		String currentPrjName = selectedEl.getPrjName();
 		
 		// initial the dynamic menu parameter
 		CommandContributionItemParameter parameter = new CommandContributionItemParameter(

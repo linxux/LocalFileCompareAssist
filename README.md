@@ -8,7 +8,7 @@ It'a very annoying for me to repeat the prepare  actions before merging: first t
 ## How it works
 After the plugin loaded,  it will add a menu item to the popup menu whether you click the right menu above the "Package Explorer" view or in the current Editor view. The submenu will popup when mouse over the menu item. Obviously, the submenu are associate with the projects under current workspace. The compare editor will be opened if there is any different  with the editing file between current project and selected the project.
 
-## Reqired Eclipse Version
+## Required Eclipse Version
 It was built under Eclipse Indigo (v3.7) and tested under Eclipse Helios (v3.6.x) and Eclipse Indigo (v3.7).
 Other versions have not been tested yet.
 

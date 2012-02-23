@@ -20,7 +20,7 @@ import org.osgi.framework.BundleContext;
 public class CompareFileActivator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "com.ah.filecompareassit.plugin.eclipse"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "com.ah.filecompareassist.plugin.eclipse"; //$NON-NLS-1$
 
 	// The shared instance
 	private static CompareFileActivator plugin;

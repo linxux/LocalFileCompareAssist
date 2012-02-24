@@ -24,7 +24,7 @@ Features:
 * Support right menu in "Text Editor" and "JSP Editor" view.
 
 ## Download
-* [Version 1.0.2 - Download JAR](https://github.com/linxux/LocalFileCompareAssist/raw/master/build/plugins/com.ah.filecompareassist.plugin.eclipse.source_1.0.2.20120224.jar)
+* [Version 1.0.2 - Download JAR](https://github.com/linxux/LocalFileCompareAssist/raw/master/build/plugins/com.ah.filecompareassist.plugin.eclipse_1.0.2.20120224.jar)
 * [Version 1.0.2 - Download Java Source](https://github.com/linxux/LocalFileCompareAssist/raw/master/build/plugins/com.ah.filecompareassist.plugin.eclipse.source_1.0.2.20120224.jar)
 
 Older Versions - [go here](https://github.com/linxux/LocalFileCompareAssist/tree/master/build/plugins)

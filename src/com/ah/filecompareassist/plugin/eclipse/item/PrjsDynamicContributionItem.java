@@ -81,7 +81,9 @@ public class PrjsDynamicContributionItem extends CompoundContributionItem {
 					+ " hidden:" + project.isHidden());
 			if(project.isOpen()) {
 				String prjName = project.getName();
-				if(!prjName.equals(currentPrjName)) {
+				if(!prjName.equals(currentPrjName)
+						&& !prjName.equalsIgnoreCase(ExceptProject.TEMPFILES.getName())
+						&& !prjName.equalsIgnoreCase(ExceptProject.PLUGINS.getName())) {
 					parameter.label = prjName;
 					if(isSimilarText(currentPrjName, prjName)) {
 						items.add(priorityIndex++, new CommandContributionItem(parameter));
@@ -116,4 +118,14 @@ public class PrjsDynamicContributionItem extends CompoundContributionItem {
 		return false;
 	}
 
+	enum ExceptProject {
+		TEMPFILES("RemoteSystemsTempFiles"), PLUGINS("External Plug-in Libraries");
+		private final String name;
+		private ExceptProject(String name) {
+			this.name = name;
+		}
+		public String getName() {
+			return name;
+		}
+	}
 }

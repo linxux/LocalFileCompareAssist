@@ -43,10 +43,14 @@ Via the Eclipse p2 update manager (This will coming soon)
 ## Screenshots
 
 ## Version History
+### 1.0.2 (Feb 24, 2012)
+* Fixed critical problem - the document cannot be updated after save the diff changes.
+* Filter the unnecessary projects.
+                      
 ### 1.0.1 (Feb 23, 2012)
 * Support popup menu in "JSP Editor" view.
-* fixed the file path under windows OS.
+* Fixed the file path under windows OS.
 
 ### 1.0.0 (Feb 22, 2012)
 * Initial the project
-* basic features: popup menu in "Package Explorer" view, "Text Editor" view.
+* Implement the basic features: popup menu in "Package Explorer" view, "Text Editor" view.

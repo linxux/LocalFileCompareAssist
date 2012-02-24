@@ -33,7 +33,7 @@ public class CommandUtil {
 				cPrjName = cu.getJavaProject().getElementName();
 				cfileLocation = cu.getResource().getLocation();
 				
-				selectoionEl = new SelectionElement(firstElement, cPrjName, cfileLocation);
+				selectoionEl = new SelectionElement(cu.getResource(), cPrjName, cfileLocation);
 
 				DebugUtil.debug(">>Current Project path: " + cu.getJavaProject().getPath().toString());
 				DebugUtil.debug(">>Current Project element name: " + cPrjName);

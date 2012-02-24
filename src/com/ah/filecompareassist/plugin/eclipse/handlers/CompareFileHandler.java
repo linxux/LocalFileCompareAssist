@@ -12,26 +12,22 @@ package com.ah.filecompareassist.plugin.eclipse.handlers;
 
 import java.io.File;
 
-import org.eclipse.compare.CompareConfiguration;
-import org.eclipse.compare.CompareUI;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.MenuItem;
-import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import com.ah.filecompareassist.plugin.eclipse.compare.ResourceCompareInput2;
+import com.ah.filecompareassist.plugin.eclipse.compare.CompareAction;
 import com.ah.filecompareassist.plugin.eclipse.util.CommandUtil;
 import com.ah.filecompareassist.plugin.eclipse.util.DebugUtil;
 import com.ah.filecompareassist.plugin.eclipse.util.SelectionElement;
@@ -43,8 +39,6 @@ import com.ah.filecompareassist.plugin.eclipse.util.SelectionElement;
  * 
  */
 public class CompareFileHandler extends AbstractHandler {
-
-	private final String CONFIRM_SAVE_PROPERTY = "org.eclipse.compare.internal.CONFIRM_SAVE_PROPERTY";
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -98,23 +92,11 @@ public class CompareFileHandler extends AbstractHandler {
 							.getFile(
 									new Path(nfileLocationStr.replace(
 											workspacePath.toString(), "")));
-
-					// construct new selection with two element
-					IStructuredSelection newSelection = new StructuredSelection(
-							new Object[] { selectoionEl.getElement(), secondElement });
+					// invoke compare action
+					CompareAction action = new CompareAction(window, new IResource[] {
+							(IResource) selectoionEl.getElement(), secondElement });
+					action.execute();
 					
-					CompareConfiguration cc = new CompareConfiguration();
-					// buffered merge mode: don't ask for confirmation when switching between modified resources
-					cc.setProperty(CONFIRM_SAVE_PROPERTY, new Boolean(false));
-					ResourceCompareInput2 fInput = new ResourceCompareInput2(cc);
-					IWorkbenchPage fWorkbenchPage = window.getActivePage();
-					boolean ok = fInput.setSelection(newSelection, fWorkbenchPage
-							.getWorkbenchWindow().getShell(), true);
-					if (ok) {
-						fInput.initializeCompareConfiguration();
-						CompareUI.openCompareEditorOnPage(fInput, fWorkbenchPage);
-					}
-
 				} else {
 					MessageDialog.openWarning(window.getShell(), "Locale Compare Warning",
 							"The file - " + nfileLocationStr + " doesn't exists.");

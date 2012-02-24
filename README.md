@@ -16,7 +16,7 @@ Other versions have not been tested yet.
 This plugin is licensed under the [Eclipse Public License v1.0 (EPL)](http://www.eclipse.org/legal/epl-v10.html).
 
 ## Latest Version
-The latest version is version 1.0.1. Updated on Feb 23, 2012.
+The latest version is version 1.0.2. Updated on Feb 24, 2012.
 
 Features:
 
@@ -44,7 +44,7 @@ Via the Eclipse p2 update manager (This will coming soon)
 
 ## Version History
 ### 1.0.2 (Feb 24, 2012)
-* Fixed critical problem - the document cannot be updated after save the diff changes.
+* Fixed the critical problem - the document cannot be updated after save the diff changes.
 * Filter the unnecessary projects.
                       
 ### 1.0.1 (Feb 23, 2012)

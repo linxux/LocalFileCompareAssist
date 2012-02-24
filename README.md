@@ -1,12 +1,16 @@
 ## Description
-The "Local File Compare Assist" plugin is an Eclipse plugin that helps you compare the same name file with other projects in the workspace. 
-It will save some time before merging  when you are in the process of  the multi-version development.
+The "Local File Compare Assist" plugin is an Eclipse plugin that helps you to compare the same name file with other projects in the workspace. It simplifies the "Compare With > Each Other" action for the same name files.
 
-(Frequently, I have to merge the modified file with other branches after added some features or fixed bugs.
-It'a very annoying for me to repeat the prepare  actions before merging: first to open the search dialog to location the file, and then select the two files which need to compare. In the big projects, it's more annoying to drag the vertical scroll bar to select the files.)
+It will save some time before merging when you are in the process of the multi-version development.
+
+(It's very annoying to use the "Compare With > Each Other" when working on the huge projects. They often have long file list, so you have to drag the vertical scroll bar to find out the files)
 
 ## How it works
-After the plugin loaded,  it will add a menu item to the popup menu whether you click the right menu above the "Package Explorer" view or in the current Editor view. The submenu will popup when mouse over the menu item. Obviously, the submenu are associate with the projects under current workspace. The compare editor will be opened if there is any different  with the editing file between current project and selected the project.
+Usually we can compare files to each other from the fast view.
+
+After loaded this plugin, we can compare files not only from the "Package Explorer" fast view but also from the current TextEditor/JSPEditor.
+
+The compare menu will be added to right key menu. Then we can compare current selected/editing file with the one in the specific project. 
 
 ## Required Eclipse Version
 It was built under Eclipse Indigo (v3.7) and tested under Eclipse Helios (v3.6.x) and Eclipse Indigo (v3.7).

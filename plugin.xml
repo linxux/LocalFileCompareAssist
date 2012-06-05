@@ -84,6 +84,39 @@
             </dynamic>
          </menu>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.wst.css.core.csssource.source.EditorContext?after=additions">
+         <menu
+               label="%compare.nonjava.label">
+            <dynamic
+                  class="com.ah.filecompareassist.plugin.eclipse.item.PrjsDynamicContributionItem"
+                  id="com.ah.filecompareassist.plugin.eclipse.dynamic1">
+            </dynamic>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:#JavaScriptEditorContext?after=additions">
+         <menu
+               label="%compare.nonjava.label">
+            <dynamic
+                  class="com.ah.filecompareassist.plugin.eclipse.item.PrjsDynamicContributionItem"
+                  id="com.ah.filecompareassist.plugin.eclipse.dynamic2">
+            </dynamic>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart?after=additions">
+         <menu
+               label="%compare.nonjava.label">
+            <dynamic
+                  class="com.ah.filecompareassist.plugin.eclipse.item.PrjsDynamicContributionItem"
+                  id="com.ah.filecompareassist.plugin.eclipse.dynamic3">
+            </dynamic>
+         </menu>
+      </menuContribution>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
